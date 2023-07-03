@@ -1,0 +1,112 @@
+<%- include('../header.ejs') %>
+  <style>
+    .container1 {
+      color: black;
+      font-size: 50px;
+      margin: 50px;
+      text-align: center;
+      padding: 150px;
+      background-image: url(https://www.georgetown.edu/wp-content/uploads/2019/08/20120319-Campus_0036-3000x1688-c--light-default.jpg);
+
+      height: 100%;
+    }
+
+    .data {
+      font-size: 15px;
+    }
+
+    .data1 {
+      font-size: 18px;
+    }
+
+    @media only screen and(max-width:767px) {
+
+
+      h1 {
+        font-size: 17px;
+      }
+
+      a {
+        padding: 10px 15px;
+        font-size: 10px;
+
+      }
+
+      p {
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+      }
+
+      .data {
+        font-size: 9px;
+      }
+
+      .data1 {
+        font-size: 10px;
+      }
+    }
+  </style>
+  <div class="container1">
+    <% if(message.length> 0){%>
+      <div class="alert alert-success">
+        <%= message %>
+      </div>
+      <% } %>
+
+        <div class="shadow-lg p-3 mb-5 bg-body rounded">
+          <h1 class=" shadow lg p-3 mb-5 bg-body rounded">Display</h1>
+          <div class="table-responsive">
+            <table class="table table-hover ">
+              <thead>
+                <tr class="data1">
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Mobile Number</th>
+                  <th>Status</th>
+                  <th>comment</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% d.forEach((item)=>{ %>
+                  <tr class="data small">
+                    <td>
+                      <%=item._id %>
+                    </td>
+                    <td>
+                      <%=item.name %>
+                    </td>
+                    <td>
+                      <%=item.email %>
+                    </td>
+                    <td>
+                      <%=item.number%>
+                    </td>
+                    <td>
+                      <%=item.status%>
+                    </td>
+                    <td>
+                      <%=item.comment%>
+                    </td>
+                    <td>
+                      <a href="/course_view/<%=item._id%>" class="btn btn-info btn-sm">View</a>
+                      <a href="/course_edit/<%=item._id%>" class="btn btn-primary  btn-sm">Edit</a>
+                      <a href="/course_delete/<%=item._id%>" class="btn btn-success  btn-sm">Delete</a>
+
+                    </td>
+                  </tr>
+
+                  <% })%>
+
+              </tbody>
+
+            </table>
+          </div>
+
+
+        </div>
+  </div>
+
+  <%- include('../footer.ejs') %>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="style.css">
+    <script src="https://kit.fontawesome.com/38846b43c5.js" crossorigin="anonymous"></script>
+    <style>
+      *{
+    margin:0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-boxf;
+}
+body{
+  overflow-x: hidden;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: white;
+  
+  }
+  
+  
+  .menu li {
+    float: right;
+    list-style: none;
+  }
+  
+ .menu li a {
+    display: block;
+    color: black;
+    font-size:20px;
+     text-align: center;
+     padding: 10px 20px;
+     text-decoration: none;
+   }
+   .menu active{
+   background-color:#8d2729;
+   color:black;
+}
+
+.menu a:hover {
+  background-color:#8d2729;
+  color:white;
+}
+.logo{
+  height: 102px;
+    width: 159px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.top-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.top-bar li {
+  float: right;
+}
+
+.top-bar  li a {
+  display: block;
+  color: black;
+  font-size:20px;
+   text-align: center;
+   padding: 10px 20px;
+   text-decoration: none;
+ }
+ .top-bar  active{
+ background-color:#8d2729;
+ color:black;
+}
+
+.top-bar a:hover {
+background-color:#8d2729;
+color:white;
+}
+.container{
+  width: 483px;
+   padding-top: 10px;
+  margin-left: auto;
+  padding-left:12px;
+  padding-right: 905px;
+  margin-right: auto;
+}
+.container1{
+  padding-top: 10px;
+  margin-left: -12px;
+    margin-right: -15px;
+}
+.container2{
+  position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50%;
+    float: left;
+}
+.slider-container{
+  height:  300px;
+  width: 1486px;
+  display:flex;
+  overflow:auto;
+  padding: 3px 3px;
+  margin:-371px 586px;
+  scroll-snap-align: X mandatory;
+}
+.slider-container .slide{
+  scroll-snap-align: start;
+  margin-left: 18px;
+  padding-left: 5px;
+
+}
+.slider-container img{
+   width: 602px;
+  height: 170%;
+  object-fit: cover;
+  padding-bottom:  59px;
+  margin-bottom: 236px;
+  align-items: right;
+
+}
+.c1{
+    max-width: 1170px;
+    
+    margin:auto;
+}
+.footer-col ul{
+    list-style: none;
+
+}
+.footer {
+    background-color: black;
+    width: 100%;
+    padding:70px 0;
+    height: 250px;
+   
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color:#ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e98e1e;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50%;
+
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+
+}
+.footer-col ul li a{
+    font-size:16px;
+    text-transform: capitalize;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display:block;
+}
+ 
+
+    </style>
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h1 id="title">Login</h1>
+      <form>
+        <div class="input-group">
+          <div class="input-field" id="nameField">
+            <i class="fa-solid fa-user"></i>
+            <input type="text"placeholder="Name">
+          </div>
+         <div class="input-group">
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email"placeholder="Email">
+          </div>
+          <div class="input-group">
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password"placeholder="Password">
+          </div>
+              <p>
+                Lost password<a href="#"> Click Here!</a>
+              </p>
+              <div class="btn-field">
+                <button type="button"id="signupBtn">Sign Up</button>
+                <button type="button"id="signinBtn"class="disable">Login In</button>
+              </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+
+  let signupBtn = document.getElementById("signupBtn");
+  let signinBtn = document.getElementById("signinBtn");
+  let title = document.getElementById("title");
+  let nameField = document.getElementById("nameField");
+
+
+  signinBtn.onclick=function(){
+    nameField.style.maxHeight="0";
+    title.innerHTML="Log In";
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+  }
+
+    signupBtn.onclick=function(){
+    nameField.style.maxHeight="60px";
+    title.innerHTML="Sign Up";
+    signupBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+  }
+</script>
+</body>
+</html>

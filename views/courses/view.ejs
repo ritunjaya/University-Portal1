@@ -1,0 +1,61 @@
+<%- include('../header.ejs') %>
+<style>
+  .container1 {
+    color:black;
+    font-size: 50px;
+    margin:50px;
+    text-align: center;
+    padding:150px;
+      background-image: url(https://www.georgetown.edu/wp-content/uploads/2019/08/20120319-Campus_0036-3000x1688-c--light-default.jpg);
+    
+      height:100%;
+    }
+  .data{
+    font-size: 15px;
+  }
+  .data1{
+    font-size: 19px;
+  }
+
+</style>
+<div class="container1">
+
+  <div class="shadow-lg p-3 mb-5 bg-body rounded">
+    <h1 class=" shadow lg p-3 mb-5 bg-body rounded">View Information</h1>
+  <div class="table-responsive">
+    <table class="table table-hover ">
+      <thead>
+      <tr class="data1">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>Qualification</th>
+        <th>Branch</th>
+        <th>Course</th>
+      </tr>
+      </thead>
+      <tbody>
+       
+          <tr class="data small">
+            <td><%=d._id %> </td>
+            <td><%=d.name %> </td>
+            <td><%=d.email %> </td>
+            <td><%=d.number %>  </td>
+            <td><%=d.address %> </td>
+            <td><%=d.gender %> </td>
+            <td><%=d.qualification %> </td>
+            <td><%=d.branch %></td>
+            <td><%=d.course %> </td>
+            
+          </tr>
+      </tbody>
+      
+    </table>
+  </div>
+</div>
+</div>
+
+<%- include('../footer.ejs') %>

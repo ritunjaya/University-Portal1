@@ -1,0 +1,547 @@
+<%- include('./header.ejs') %>
+<style>
+    *{
+      margin:0;
+     padding: 0;
+     font-family: "adobe-caslon-pro", Times, serif !important;
+      font-style: italic !important;
+      font-weight: 400 !important;
+     box-sizing: border-boxf;
+     }
+     ul.list{
+      display: flex;
+     }
+     .section-padding{
+      padding:100px 0;
+     }
+    
+     .carousel-item{
+      height:100vh;
+      min-height: 300px;
+     }
+     .carousel-caption{
+      bottom:220px;
+      z-index:2;
+     }
+     .carousel-caption h5{
+      font-size: 45px;
+      text-transform: uppercase;
+      letter-spacing:2px;
+      margin-top:25px;
+     }
+     .carousel-caption p{
+      width: 60%;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.9;
+     }
+     .carousel-inner::before{
+      content: '';
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      top:0;
+      left:0 ;
+      background: rgba(0,0,0,0.7);
+      z-index :1; 
+     }
+     .navbar-nav a{
+      font-size:15px;
+      text-transform:uppercase;
+      font-weight: 500;
+     }
+     .navbar-light.navbar-brand{
+      color:#000;
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+     }
+     .navbar-light.navbar-brand:focus,
+     .navbar-light.navbar-brand:hover{
+      color:#000;
+     }
+     .navbar-light.navbar-nav.navbar-link{
+      color:#000;
+     }
+     .w-100{
+      height:100vh;
+     }
+     .services .card-body i{
+       font-size:50px;
+     }
+    .container1{
+      background-image: url(https://www.georgetown.edu/wp-content/uploads/2019/08/20120319-Campus_0036-3000x1688-c--light-default.jpg);
+    }
+    .v {
+          border-right: 1px solid rgb(117, 114, 114);
+          height: 300px;
+      }
+      .container2{
+        color: #131313;
+        text-align: center;
+        
+      }
+      p{
+        font-size:21px ;
+      }
+      h1,h4{
+        font-size: 70px;
+      }
+      .services .container{
+        background-image: url(https://www.georgetown.edu/wp-content/uploads/2019/08/20120319-Campus_0036-3000x1688-c--light-default.jpg);
+      }
+      .img-fluid2{
+        max-width: 152%;
+        height: auto;
+      }
+      
+       /*responsive*/
+       @media only screen and(mix-width:769px) and (max-width:991px) {
+        .carousel-caption{
+          bottom: 370px;
+        }
+        .carousel-caption p{
+          width: 100%;
+        }
+
+       }
+
+       @media only screen and(max-width:767px){
+        .navbar-nav{
+           text-align: center;
+        }
+        .carousel-caption{
+          bottom:125px;
+        }
+        .carousel-caption h1{
+          font-size: 17px;
+        }
+        .carousel-caption a{
+          padding:10px 15px;
+          
+        }
+        .carousel-caption p{
+          width:100%;
+          line-height: 1.6;
+          font-size: 12px;
+        }
+       }
+       
+    </style>   
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://media.istockphoto.com/id/1456749194/photo/college-students-arriving-for-night-school.jpg?b=1&s=170667a&w=0&k=20&c=n4vQJWqfdG8NgdO2QRu7bfkvislcKTpTzb_vYp1hjqE=" class="d-block w-100" alt="...">
+            <div class="carousel-caption  d-md-block">
+              <h1>Your Dream University</h1>
+              <p><a href="./campus"class="btn btn-primary mt3">  &nbsp &nbsp &nbsp &nbsp Learn More  &nbsp &nbsp &nbsp &nbsp </a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://media.istockphoto.com/id/1463405590/photo/change-the-school-system.jpg?b=1&s=170667a&w=0&k=20&c=376peQjsi72rHl6KzCCxNCp8VnJB-7oE6ELqxJpDJfw=" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h1>Your Future Our Guarantee</h1>
+              <p></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1613592498887-da347580ec0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+            <div class="carousel-caption  d-md-block">
+              <h1>Register Now</h1>
+              <p><a href="./contact"class="btn btn-primary mt3"> &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp Apply  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp </a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+       <!---about-->
+       <section id="about" class="about section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+              <div class="about-img">
+                <img src="https://plus.unsplash.com/premium_photo-1663126998088-32723c046118?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"alt=""class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5">
+            <div class="about-text">
+              <h4>An Education for the Mind <br> & Hearty</h4>
+              <p>An Education for the Mind & Heart
+                Intellectual rigor. Social justice. Self-reflection. They’re knitted together in every facet of your Georgetown experience – in your studies, your research, your interactions with faculty and the career decisions you make.
+                
+              </br></br><h3>Who We Are >>></h3></p>
+              <a href="./about" class="btn btn-primary">Learn More</a>
+            </div>
+            </div>
+          </div>
+        </div>
+       </section>
+       <!---services section-->
+       <section id="services"class="services section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header text-center pb-5">
+                <h4>Course</h4>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-white text-center bg-dark pb-4">
+                <div class="card-body">
+                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"class="card-img-top" alt="...">
+                  <i class="bi bi-subtract"></i>
+                  <h3 class="card-title">Btech</h3>
+                  <p class="lead">Bachelor of Technology (BTech) is a professional undergraduate engineering degree programme awarded to candidates after they complete four years of study in the field..</p>
+                   <% if(b){ %>
+                    <a href="/courses/display" class="btn btn-warning">Display Btech</a>
+                    <% } else { %>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#btechModal"class="btn btn-primary">Register now</a>
+                     <% }%>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-white text-center bg-dark pb-4">
+                <div class="card-body">
+                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHN0dWRlbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                  <i class="bi bi-subtract"></i>
+                  <h3 class="card-title">MBA</h3>
+                  <p class="lead"> A master of business administration (MBA) is a graduate degree that provides theoretical and practical training for business or investment management.</p>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#MbaModal"class="btn btn-primary">Register now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-white text-center bg-dark pb-4">
+                <div class="card-body">
+                  <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHN0dWRlbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                  <i class="bi bi-subtract"></i>
+                  <h3 class="card-title">Mtech</h3>
+                  <p class="lead">
+                    MTech is a professional postgraduate engineering master degree programme awarded to candidates after completion of two years of study in the discipline of engineering.</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#MtechModal"class="btn btn-primary">Register now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+       <!------portfolio-->
+       <section id="portfolio" class="portfolio section-padding">
+        <div class="container1">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header text-center pb-5">
+                <h1>Academic Life</h1>
+                <p>We live at the intersection of teaching and doing, where learning is more than the transmission <br>of knowledge,&nbsp  it is an act of collaboration and practice.<br>Under the mentorship of our distinguished faculty, you’ll go beyond the information to not </br>just learn about your field, but also to learn your field’s way of thinking. Through lectures,<br> small group projects, independent studies, office hours, internships and more, &nbsp  &nbsp <br>you’ll leave Georgetown with the intellectual skills of perception, analysis, interpretation and expression.</br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="about-img">
+                  <img src="https://www.georgetown.edu/wp-content/uploads/2019/09/20180116_Emily-Graul-6961-1050x1050-c-default.jpg"alt=""class="img-fluid">
+                </div>
+              </div>
+              <div class="col">
+                <div class="about-img">
+                  <img src="https://www.georgetown.edu/wp-content/uploads/2019/09/Susu_NotOptimized-1050x1050-c-default.jpg"alt=""class="img-fluid">
+                </div>
+              </div>
+              <div class="col">
+                <div class="about-img">
+                  <img src="https://www.georgetown.edu/wp-content/uploads/2019/09/Diego1-1-e1568749325454-1050x1050-c-default.jpg"alt=""class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+       <!----section-->
+       <section>
+        <div class="container2">
+          <div class="row">
+            <div class="col">
+             <div class="v">
+             <h1><center>11:1  &nbsp &nbsp  &nbsp &nbsp</h1>
+             <h2> Students:Professors</h2>
+             <p>Class-size ratio encourages open<br> dialogue and inquiry</br></p> </center>
+             
+             </div>
+            </div>
+            <div class="col">
+              <div class="v">
+                <h1><center>100</h1>
+                  <h2> Prestigious scholarships & fellowships</h2>
+                  <p>awarded each year to<br> undergraduates and recent alumni</br></p> </center>
+               </div>
+            </div>
+            <div class="col">
+              <h1><center>91%</h1>
+                <h2> Of 2018 graduates</h2>
+                <p>employed or continuing education<br> post-graduation</br></p> </center>
+                
+            </div>
+          </div>
+        </div>
+       </section>
+       <!----campus-->
+       <section id="about" class="about section-padding11">
+        <div class="container"style="    padding: 90px;">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+              <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"alt=""class="img-fluid2">
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-12 ps-lg-5 mt-md-5">
+            <div class="about-text">
+              <h4>There’s more to life than class.    </h4>
+              <p>You’re not just choosing a school — you’re choosing a home. On Alverno’s beautiful campus you’ll find a diverse, welcoming community of students and faculty, plus opportunities to learn, lead, explore and give back, not to mention have fun. And you don’t have to live on campus to enjoy a host of activities and special events (but spoiler: you may not want to leave once you’re here).
+                   
+                Who We Are</p>
+              <a href="./academic" class="btn btn-primary">Learn More</a>
+            </div>
+            </div>
+          </div>
+        </div>
+       </section>
+       <section id="campus"class="campus section-padding ">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header text-center pb-5">
+                <h1></h1>
+              </div>
+      
+            </div>
+          
+          </div>
+        </div>
+      
+       </section>
+ 
+  <!--btech Modal -->
+  <div class="modal fade" id="btechModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">B.Tech Registration</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+        <form action="/course_insert" method="post">
+            <div class="mb-3">
+              <label>Name:</label>
+              <input type="text" name="name" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label>Email:</label>
+              <input type="email" name="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label>Mobile Number:</label>
+              <input type="number" name="number" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label>Address:</label>
+              <textarea row="5" cols="30" class="form-control" name="address"></textarea>
+            </div>
+            <div class="mb-3">
+              <label>Gender:</label>
+              <label for="exampleInputEmail1">Gender</label> <br>
+                        <input type="radio" id="" name="gender" value="male" required=""> Male <br>
+
+                        <input type="radio" id="" name="gender" value="female" required=""> Female
+            </div>
+            <div class="mb-3">
+              <label>Qualifications:</label>
+              <select class="form-control" name="qualification">
+                  <option >Please Select</option>
+                  <option >10th</option>
+                  <option >12th</option>
+                  <option >B.C.A</option>
+              </select>   
+            </div>
+            <div class="mb-3">
+              <label>Branch:</label>
+              <select class="form-control" name="branch">
+                  <option >Please Select</option>
+                  <option >Cse</option>
+                  <option >IT</option>
+                  <option >EC</option>
+              </select>   
+            </div>
+            <div class="mb-3">
+              <label>Course</label>
+              <input type="text" value="btech" name="course" class="form-control" readonly>
+            </div>
+            <div class="d-grid gap-2 d-md-block">
+              <button type="submit" class="btn btn-outline-primary">submit</button>
+            </div>
+          </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+
+  <!--Mba modal-->
+ 
+  <div class="modal fade" id="MbaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">M.B.A Registration</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+      <form action="/course_insert" method="post">
+          <div class="mb-3">
+            <label>Name:</label>
+            <input type="text" name="name" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Email:</label>
+            <input type="email" name="email" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Mobile Number:</label>
+            <input type="number" name="number" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Address:</label>
+            <textarea row="5" cols="30" class="form-control" name="address"></textarea>
+          </div>
+          <div class="mb-3">
+            <label>Gender:</label>
+            <label for="exampleInputEmail1">Gender</label> <br>
+                      <input type="radio" id="" name="gender" value="male" required=""> Male <br>
+
+                      <input type="radio" id="" name="gender" value="female" required=""> Female
+          </div>
+          <div class="mb-3">
+            <label>Qualifications:</label>
+            <select class="form-control" name="qualification">
+                <option >Please Select</option>
+                <option >10th</option>
+                <option >12th</option>
+                <option >B.C.A</option>
+            </select>   
+          </div>
+          <div class="mb-3">
+            <label>Branch:</label>
+            <select class="form-control" name="branch">
+                <option >Please Select</option>
+                <option >Cse</option>
+                <option >IT</option>
+                <option >EC</option>
+            </select>   
+          </div>
+          <div class="mb-3">
+            <label>Course</label>
+            <input type="text" value="mba" name="course" class="form-control" readonly>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <button type="submit" class="btn btn-outline-primary">submit</button>
+          </div>
+        </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+   <!----Mtech modal-->
+   <div class="modal fade" id="MtechModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Mtech Registration</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+      <form action="/course_insert" method="post">
+          <div class="mb-3">
+            <label>Name:</label>
+            <input type="text" name="name" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Email:</label>
+            <input type="email" name="email" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Mobile Number:</label>
+            <input type="number" name="number" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Address:</label>
+            <textarea row="5" cols="30" class="form-control" name="address"></textarea>
+          </div>
+          <div class="mb-3">
+            <label>Gender:</label>
+            <label for="exampleInputEmail1">Gender</label> <br>
+                      <input type="radio" id="" name="gender" value="male" required=""> Male <br>
+
+                      <input type="radio" id="" name="gender" value="female" required=""> Female
+          </div>
+          <div class="mb-3">
+            <label>Qualifications:</label>
+            <select class="form-control" name="qualification">
+                <option >Please Select</option>
+                <option >10th</option>
+                <option >12th</option>
+                <option >B.C.A</option>
+            </select>   
+          </div>
+          <div class="mb-3">
+            <label>Branch:</label>
+            <select class="form-control" name="branch">
+                <option >Please Select</option>
+                <option >Cse</option>
+                <option >IT</option>
+                <option >EC</option>
+            </select>   
+          </div>
+          <div class="mb-3">
+            <label>Course</label>
+            <input type="text" value="Mtech" name="course" class="form-control" readonly>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <button type="submit" class="btn btn-outline-primary">submit</button>
+          </div>
+        </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<%- include('./footer.ejs') %>
