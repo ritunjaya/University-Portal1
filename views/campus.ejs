@@ -195,53 +195,124 @@ img, svg {
     }
   }
      /*responsive*/
-     @media  (mix-width:100px) and (max-width:500px) {
-        .container{
-          display:block;
-         width:100px;
-        }
-        .containers{
-          display: block;
-          width: 300%;
-         height:100px;
-         bottom: 200px;
-        
+   
+      @media (min-width:100px) and (max-width:500px) {
+     
+h1,h2,h4{
+  margin-top: 106px;
+  font-size: 36px;
+}
+p{
+ 
+    font-size: 15px;
+}
+p {
+    margin-top: 17px;
+    margin-bottom: 1rem;
+}
 
-        }
-        .container5{
-          display: block;
-         width: 300px;
-         height:100px;
-         bottom: 200px;
-        
-        }
-        .fuild{
-          display: block;
-          width: 100px;
-          bottom: 68px;
-          background-image: url("https://www.georgetown.edu/wp-content/uploads/2019/09/20190412_GAAP_WeekendWelcome-0231-Edit-2000x750-c-default.jpg");
+        .fuild {
+        display: block;
+        width: 100%;
+        bottom: 68px;
+        background-image: url("https://www.georgetown.edu/wp-content/uploads/2019/09/20190412_GAAP_WeekendWelcome-0231-Edit-2000x750-c-default.jpg");
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        color: rgba(255, 255, 255, 0.5);
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top: 0;
+        display: -ms-flexbox;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        height: 400px;
+        padding-bottom: 0px;
+        width: 100%;
 
+
+      }
+
+      .about {
+        display: block;
+        bottom: 0px;
+        width: 8.333333%;
+        
+      }
+      .container5{
+          display: block;
+         width: 375px;
+         height:100px;
+        
         }
         .about0{
           display: block;
-          width: 100px;
+          width: 100%;
           bottom: 68px;
           background-image: url("https://www.georgetown.edu/wp-content/uploads/2019/09/20180606_Neighborhood_ColorfulHouses-4790-3000x1688-c--light-default.jpg); display: block;");
-        }
-          h1,h4{
-          font-size: 20px;
-          line-height: 1.9;
-        }
-        p{
-          width:400px;
-          line-height: 2.9;
-          font-size: 19px;
-        }
-        .about-textf{
-          bottom: px;
-          width: 8.333333%;
+          display: block;
+        width: 100%;
+        bottom: 68px;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        color: rgba(255, 255, 255, 0.5);
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top: 0;
+        display: -ms-flexbox;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        height: 400px;
+        padding-bottom: 0px;
+        width: 100%;
 
         }
+        .portfolio {
+          display: block;
+          overflow: hidden;
+        position: relative;
+        text-align: center;
+        height: 800px;
+        padding-bottom: 50px;
+        width: 800%;
+        display: flex;
+        
+
+        }
+        .about-textf {
+    position: relative;
+    right: -12%;
+    font-size: 174%;
+    padding-bottom: 19px;
+    margin-top: 106px;
+}
         img{
           bottom: px;
           width: 8.333333%;
@@ -259,31 +330,15 @@ img, svg {
         .ff{
           bottom: 0px;
           width: 8.333333%;
+
         }
-        .youtube-video{
-          bottom: px;
-          width: 8.333333%;
-        }
-        .about-text1{
-          bottom: 0px;
-        }
-        .carousel-item {
-          bottom: 370px; 
-        }
-        .container2{
-          bottom: 0px; 
-        }
-        .row{
-          bottom: 0px; 
-        }
-       } 
+
+    }
+ 
       
 </style>
 </head>
 <body>
-    <!--background-image: url('https://www.georgetown.edu/wp-content/uploads/2019/09/20190410_SpringCampusStock_Healy-10-3000x1688-c--light-default.jpg');-->
-    <!--https://www.georgetown.edu/wp-content/uploads/2019/09/20180606_Neighborhood_ColorfulHouses-4790-3000x1688-c--light-default.jpg--->
-    <!--https://www.georgetown.edu/wp-content/uploads/2019/09/20190412_GAAP_WeekendWelcome-0231-Edit-2000x750-c-default.jpg-->
     <section id="about" class= "fuild" style="background-image: url(https://www.georgetown.edu/wp-content/uploads/2019/09/20190412_GAAP_WeekendWelcome-0231-Edit-2000x750-c-default.jpg);height: 500px; width:  1598px; display: block; background-position: center center; background-size: cover">
         <div class="container">
          
@@ -476,14 +531,8 @@ img, svg {
    </div>
  </div>
 </section >
-
-   
-
 </body>
 <script>
-
-
-
  function show()
  {
    im = document.getElementById("im")
