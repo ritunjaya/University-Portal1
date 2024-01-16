@@ -1,0 +1,86 @@
+<%- include('../header.ejs') %>
+<style>
+  .container1 {
+    color:black;
+    font-size: 50px;
+    margin:50px;
+  
+    padding:150px;
+      background-image: url(https://www.georgetown.edu/wp-content/uploads/2019/08/20120319-Campus_0036-3000x1688-c--light-default.jpg);
+    
+      height:100%;
+    }
+  .data{
+    font-size: 15px;
+  }
+  .modal-body{
+    font-size: 19px;
+  }
+  h1
+  {
+    text-align: center;
+  }
+
+</style>
+<div class="container1">
+
+  <div class="shadow-lg p-3 mb-5 bg-body rounded">
+    <h1 class=" shadow lg p-3 mb-5 bg-body rounded">Edit Information</h1>
+  <div class="table-responsive">
+    <div class="modal-body">
+      <form action="/course_update/<%= d._id %>" method="post">
+        <div class="mb-3">
+          <label>Name:</label>
+          <input type="text" name="name" class="form-control"value="<%= d.name %>">
+        </div>
+        <div class="mb-3">
+          <label>Email:</label>
+          <input type="email" name="email" class="form-control"value="<%= d.email %>">
+        </div>
+        <div class="mb-3">
+          <label>Mobile Number:</label>
+          <input type="number" name="number" class="form-control"value="<%= d.number %>">
+        </div>
+        <div class="mb-3">
+          <label>Address:</label>
+          <textarea row="5" cols="30" class="form-control" name="address"><%= d.address %></textarea>
+        </div>
+        <div class="mb-3">
+          <label>Gender:</label>
+          <label for="exampleInputEmail1">Gender</label> <br>
+                    <input type="radio" id="" name="gender" value="male" required="" <%= d.gender=='male'?'checked':'' %>> Male <br>
+
+                    <input type="radio" id="" name="gender" value="female" required="" <%= d.gender=='female'?'checked':'' %>> Female
+        </div>
+        <div class="mb-3">
+          <label>Qualifications:</label>
+          <select class="form-control" name="qualification">
+              <option >Please Select</option>
+              <option <%= d.qualification =='10th'?'selected':'' %>>10th</option>
+              <option <%= d.qualification =='12th'?'selected':'' %>>12th</option>
+              <option <%= d.qualification =='B.C.A'?'selected':'' %>>B.C.A</option>
+          </select>   
+        </div>
+        <div class="mb-3">
+          <label>Branch:</label>
+          <select class="form-control" name="branch">
+              <option >Please Select</option>
+              <option>Cse</option>
+              <option >IT</option>
+              <option >EC</option>
+          </select>   
+        </div>
+        <div class="mb-3">
+          <label>Course</label>
+          <input type="text" value="btech" name="course" class="form-control" readonly >
+        </div>
+        <div class="d-grid gap-2 d-md-block">
+          <button type="submit" class="btn btn-outline-primary">submit</button>
+        </div>
+      </div>
+  </form>
+  </div>
+</div>
+</div>
+
+<%- include('../footer.ejs') %>
